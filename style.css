@@ -1,0 +1,43 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+   HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+body {
+  --walnut-brown: #544b3dff;
+  --chocolate: #6f3400ff;
+  --seafoam-white: rgb(224, 249, 255);
+  --sky-blue: #57c4e5ff;
+  --lapis: #085fa1ff;
+  
+  background-color: var(--lapis);
+  background-image: url(water_assets/underwater-bg.gif);
+  background-size: 100% 100%;
+  min-height: 100vh;
+  color: var(--seafoam-white);
+  font-family: cursive;
+  font-size: 15px;
+  cursor: auto/*,url()*/;
+  margin-left:  120px;
+  margin-top: 60px;
+}
+.grid{
+  position: relative;
+  display: grid;
+  margin: auto;
+  max-width:fit-content;
+}
+.nav{
+  z-index: 99;
+  background-color: yellow;
+  position: absolute;
+  padding: 10px;
+  height: 100%;
+  width: 120px;
+
+}
+
+.navlink{
+  background-color: white;
+  display: block;
+  padding: 5px;
+  margin: 8px 5px 8px;
+}
