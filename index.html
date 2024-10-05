@@ -5,56 +5,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mal's Oceanic Emporium</title>
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-    <link rel="icon" href="water_assets/waveico.gif" type="image/gif" >
+    <link id="favicon" rel="icon" href="assets/waveico.gif" type="image/gif" >
+    <script type="text/javascript">
+      var isChromium = !!window.chrome;
+      if(isChromium){
+        let head = document.head;
+        let favicon = head.querySelector('favicon');
+        head.removeChild(favicon);
+        innerHTML += '<link rel="icon" href="' + 'assets\tinysquid.png' + '" type="image">';
+      }
+    </script>
   </head>
   <body>
+    <div class="spinfish movable">
+
+    </div>
     <div id="wrapper">
       <!--Will contain header element, theme switcher(above water, underwater), and a little marquee graphic i hope-->
 
-      <header id="header"></header>
+      <header id="header">
+        <h1> Welcome to the Oceanic Emporium </h1>
+      </header>
       <div class="marquee"></div>
       <!--contains navlink, grid, and aquarium -->
       <nav>
-        <h3>personal</h3>
-        <a href="/aboutme">about</a>
-        <a href="/shiplog"> shiplog</a>
-        <a href="/sitemap">sitemap</a>
-        <a href="/curious">curious</a>
-        <h3>Stuff</h3>
-        <a href="">art</a>
-        <a href="/guestbook"> guestbook(permanent canvas) </a>
-        <a href="/shanties"> shanties</a>
-        <a href="/library"> library</a>
-        <a href="/magic8ball">parrot</a>
-        <a href="/curios"></a>
-        <h3>Dinghies</h3>
-        <a href="https://github.com/avvnova/neocities-malmal">schematics</a>
-        <a href="/harbor">harbor</a>
-        <a></a>
+        <h3 style="text-align: center">Personal</h3>
+        <a class="navlink" href="index.html"><div class="navtext" style="background-color:red; box-shadow:5px 5px 5px black;">about</div></a>
+        <a class="navlink" href="/shiplog"><div class="navtext" style="background-color:aqua;">shiplog</div></a>
+        <!--<a href="/sitemap">sitemap</a>-->
+        <!--<a href="/curious">curios</a>-->
+        <!--<h1>Stuff</h1>-->
+        <!--<a href="">art</a>-->
+        <!--<a href="/guestbook"> guestbook(permanent canvas) </a>-->
+        <!--<a href="/shanties"> shanties</a>-->
+        <!--<a href="/library"> library</a>-->
+        <!--<a href="/magic8ball">parrot</a>-->
+        <!--<a href="/curios"></a>-->
+        <!--<h3>Dinghies</h3>-->
+        <!--<a href="https://github.com/avvnova/neocities-malmal">schematics</a>-->
+        <!--<a href="/harbor">harbor</a>-->
       </nav>
-      <div id="intro">
-        <!---->
+      <div id="intro" class="box">
+        <h2> What's up Slime</h2>
+        <p> What's up slime</p><!---->
       </div>
-      <div id="status">
-        <!---->
+      <div id="status" class="box"><!----> </div>
+      <div id="employeemonth" class="box">
+        <h2> Employee of the Month</h2>
+        <!--<a href link to a simple flex grid page with all the previous employees of the month-->
+        <div id="D">
+          <img src="assets/joel-spin.gif" width="95%">
+        </div>
       </div>
-      <div id="counter">
-        <!--track visits-->
-      </div>
-      <div id="bulletin board">
-        
-      </div>
-      <div id="crew">
-        <!--friends and their pages/socials-->
-      </div>
-      <div id="employee of the month">
-        <!--some gif here-->
-      </div>
-      <div id="messages(inbottles)"></div>
-      <div id="aquarium"></div>
+      <div id="bulletinboard" class="box"><!--updates to page--></div>
+      
+      <!--<div id="counter" class="box">track visits</div>-->
+      <!--<div id="crew" class="box">friends and their pages/socials</div>-->
+      <!--<div id="messages(inbottles)" class="box"></div>-->
+      <br>
 
-
-      <div class="footer"></div>
+      <div class="footer">
+        <div id="aquarium" class="box"></div>
+      </div>
   </div>
   </body>
   <br>

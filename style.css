@@ -1,43 +1,119 @@
 /* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
    HTML content. To learn how to do something, just try searching Google for questions like
    "how to change link color." */
+   @font-face {
+    font-family: 'Black_Rathen';
+    src: url(fonts/Black-Rathen-Demo-BF66f25bb02f517.otf);
+  }
+
+*{
+  box-sizing: border-box;
+  list-style-position: inside;
+}
+
+a{
+  text-decoration: none;
+  color: var(--link-color);
+  text-shadow: darkred;
+  transition: .7s;
+}
+
 body {
-  --walnut-brown: #544b3dff;
-  --chocolate: #6f3400ff;
-  --seafoam-white: rgb(224, 249, 255);
-  --sky-blue: #57c4e5ff;
-  --lapis: #085fa1ff;
+
+  --boardwalk: #6f3400ff;
+  --seafoam-white: #e0f9ff;
+  --sky-blue: #57c4e5;
+  --darkblue: #001e41;
+  --coral: #FF8559;
   
   background-color: var(--lapis);
-  background-image: url(water_assets/underwater-bg.gif);
+  background-image: url(assets/underwater-bg.gif);
   background-size: 100% 100%;
   min-height: 100vh;
   color: var(--seafoam-white);
-  font-family: cursive;
+  font-family: 'Papyrus';
   font-size: 15px;
-  cursor: auto/*,url()*/;
-  margin-left:  120px;
-  margin-top: 60px;
+  cursor: url(assets/tinysquid.cur), auto;
+  margin-left:  15%;
+  margin-top: 1%;
+  margin-right: 15%;
 }
-.grid{
+
+#wrapper {
   position: relative;
   display: grid;
   margin: auto;
-  max-width:fit-content;
+  grid-template-areas:
+    "header header header header"
+    "marquee marquee marquee marquee"
+    "nav info info updates"
+    "nav employeemonth bulletinboard bulletinboard"
+    "status status bulletinboard bulletinboard"
+    "footer footer footer footer";
+  grid-template-columns: 1fr repeat(2, 2fr) 1fr;
+  grid-template-rows: 80px 30px 390px 190px 260px 30px;
+  gap: 10px;
+  padding: 20px 75px 20px 20px; 8 8 
 }
-.nav{
+header{
+  grid-row: auto;
+  grid-column-start: 1;
+  grid-column-end: span 5;
+}
+nav{
   z-index: 99;
-  background-color: yellow;
+  background-color: var(--darkblue);
+  /*background-image: url(assets/placeholderwood.jpg);*/
+  grid-column: 1;
+  width: 1fr;
+}
+.navlink{
+  display: contents;
+}
+.navtext{
+  padding: 1px;
+  border: #085fa1ff 1px dashed;;
+  border-radius: 5%;
+  border-style: inset;
+  text-align: center;
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.box{
+  background-image: linear-gradient(rgb(230, 100, 101, 0), rgb(145, 152, 229) );
+  border-color: aquamarine;
+  border-width: 5px;
+  border-style: dashed;
+}
+#intro{
+  grid-column: 2;
+
+}
+#aquarium{
+  z-index: 99;
+  background-image: url(assets/placeholderwood.jpg);
   position: absolute;
   padding: 10px;
-  height: 100%;
-  width: 120px;
-
+  width: 1fr;
+}
+h1{
+  font-family: 'Black_Rathen';
+  font-size: xx-large;
+  text-shadow: #001e41 0px 10px 5px ;
 }
 
-.navlink{
-  background-color: white;
-  display: block;
-  padding: 5px;
-  margin: 8px 5px 8px;
+h1::first-letter{
+  color: var(--coral);
+}
+h2{
+  font-family: 'papyrus';
+  text-shadow: #e0f9ff 0px 0px 10px;
+}
+h3{
+  font-family: 'papyrus';
+}
+
+.D{
+  border-image: linear-gradient(#f6b73c, #4d9f0c) 30;
 }
