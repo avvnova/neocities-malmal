@@ -23,7 +23,7 @@ body {
   --boardwalk: #6f3400ff;
   --seafoam-white: #e0f9ff;
   --sky-blue: #57c4e5;
-  --darkblue: #001e41;
+  --darkblue: rgb(0, 30, 65);
   --coral: #FF8559;
   
   background-color: var(--lapis);
@@ -46,8 +46,8 @@ body {
   grid-template-areas:
     "header header header header"
     "marquee marquee marquee marquee"
-    "nav info info updates"
-    "nav employeemonth bulletinboard bulletinboard"
+    "nav intro intro updates"
+    "nav employee bulletinboard bulletinboard"
     "status status bulletinboard bulletinboard"
     "footer footer footer footer";
   grid-template-columns: 1fr repeat(2, 2fr) 1fr;
@@ -55,24 +55,30 @@ body {
   gap: 10px;
   padding: 20px 75px 20px 20px;
 }
+
 header{
+  grid-area: header;
   grid-row: auto;
   grid-column-start: 1;
   grid-column-end: span 5;
 }
+.marquee{
+  grid-area: marquee;
+}
 nav{
+  grid-area:nav;
   z-index: 99;
-  background-color: var(--darkblue);
+  background-image: linear-gradient(rgb(0, 30, 65, 0), rgb(0, 30, 65) );
   /*background-image: url(assets/placeholderwood.jpg);*/
-  grid-column: 1;
   width: 1fr;
+
 }
 .navlink{
   display: contents;
 }
 .navtext{
   padding: 1px;
-  border: #085fa1ff 1px dashed;;
+  border: #085fa1ff 1px dashed;
   border-radius: 5%;
   border-style: inset;
   text-align: center;
@@ -87,8 +93,14 @@ nav{
   border-style: dashed;
 }
 #intro{
-  grid-column: 2;
+  grid-area: intro;
 
+}
+#updates{
+  grid-area: updates;
+}
+#employeemonth{
+  grid-area: employee;
 }
 #aquarium{
   z-index: 99;
@@ -97,6 +109,16 @@ nav{
   padding: 10px;
   width: 1fr;
 }
+
+#bulletinboard{
+  grid-area: bulletinboard;
+}
+
+#status{
+  grid-area: status;
+}
+
+footer{grid-area: footer;}
 h1{
   font-family: 'Black_Rathen';
   font-size: xx-large;
