@@ -14,7 +14,7 @@
 a{
   text-decoration: none;
   color: var(--link-color);
-  text-shadow: darkred;
+  text-shadow: var(--boardwalk);
   transition: .7s;
 }
 
@@ -23,7 +23,7 @@ body {
   --boardwalk: #6f3400ff;
   --seafoam-white: #e0f9ff;
   --sky-blue: #57c4e5;
-  --darkblue: rgb(0, 30, 65);
+  --darkblue: #001e41;
   --coral: #FF8559;
   
   background-color: var(--lapis);
@@ -77,6 +77,7 @@ nav{
   display: contents;
 }
 .navtext{
+  background: radial-gradient(circle, rgba(87,196,229,0) 0%, rgba(111,52,0,0.5) 100%);
   padding: 1px;
   border: #085fa1ff 1px dashed;
   border-radius: 5%;
@@ -87,13 +88,14 @@ nav{
   margin-right: 10%;
 }
 .box{
-  background-image: linear-gradient(rgb(230, 100, 101, 0), rgb(145, 152, 229) );
-  border-color: aquamarine;
-  border-width: 5px;
-  border-style: dashed;
+  background-image: linear-gradient(rgb(230, 100, 101, 0), var(--sky-blue) );
+  padding:10px;
+  border-color: var(--seafoam-white);
+  border-style: groove;
 }
 #intro{
   grid-area: intro;
+  background-image: linear-gradient(rgb(230, 100, 101, 0), var(--darkblue));
 
 }
 #updates{
