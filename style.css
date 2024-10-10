@@ -47,8 +47,8 @@ body {
     "header header header header"
     "marquee marquee marquee marquee"
     "nav intro intro updates"
-    "nav employee bulletinboard bulletinboard"
-    "status status bulletinboard bulletinboard"
+    "nav status bulletinboard bulletinboard"
+    "employee employee bulletinboard bulletinboard"
     "footer footer footer footer";
   grid-template-columns: 1fr repeat(2, 2fr) 1fr;
   grid-template-rows: 80px 30px 390px 190px 260px 30px;
@@ -140,4 +140,7 @@ h3{
 
 .D{
   border-image: linear-gradient(#f6b73c, #4d9f0c) 30;
+  position: center;
+  width: 50%;
+  height: "50%";
 }
