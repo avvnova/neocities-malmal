@@ -3,7 +3,7 @@
    "how to change link color." */
    @font-face {
     font-family: 'Black_Rathen';
-    src: url(fonts/Black-Rathen-Demo-BF66f25bb02f517.otf);
+    src: url(../fonts/Black-Rathen-Demo-BF66f25bb02f517.otf);
   }
 
 *{
@@ -19,7 +19,6 @@ a{
 }
 
 body {
-
   --boardwalk: #6f3400ff;
   --seafoam-white: #e0f9ff;
   --sky-blue: #57c4e5;
@@ -27,13 +26,13 @@ body {
   --coral: #FF8559;
   
   background-color: var(--lapis);
-  background-image: url(assets/underwater-bg.gif);
+  background-image: url(../assets/water-bg.gif);
   background-size: 100% 100%;
   min-height: 100vh;
   color: var(--seafoam-white);
   font-family: 'Papyrus';
   font-size: 15px;
-  cursor: url(assets/tinysquid.cur), auto;
+  cursor: url(../assets/tinysquid.png), auto;
   margin-left:  15%;
   margin-top: 1%;
   margin-right: 15%;
@@ -98,15 +97,23 @@ nav{
   background-image: linear-gradient(rgb(230, 100, 101, 0), var(--darkblue));
 
 }
+#updates::before{
+
+}
+
 #updates{
   grid-area: updates;
+  overflow: scroll;
 }
 #employeemonth{
   grid-area: employee;
 }
+#employeemonth::after{
+  
+}
 #aquarium{
   z-index: 99;
-  background-image: url(assets/placeholderwood.jpg);
+  background-image: url(../assets/placeholderwood.jpg);
   position: absolute;
   padding: 10px;
   width: 1fr;
