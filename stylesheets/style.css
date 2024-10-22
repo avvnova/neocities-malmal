@@ -3,24 +3,28 @@
    "how to change link color." */
    @font-face {
     font-family: 'BubblePixel';
-    src: url(../fonts/04B_30__.TTF);
+    src: url("../fonts/04B_30.TTF?") format("truetype");
   }
   @font-face {
     font-family: 'Crang';
-    src: url(../fonts/Crang.TTF);
+    src: url("../fonts/Crang.TTF?") format("truetype");
   }
 
   @font-face {
     font-family: 'Paskowy';
-    src: url(../fonts/Paskowy.TTF);
+    src: url("../fonts/Paskowy.TTF?") format("truetype");
   }
   @font-face {
     font-family: 'Daydream';
-    src: url(../fonts/Daydream.TTF);
+    src: url("../fonts/Daydream.TTF?") format("truetype");
   }
   @font-face {
     font-family: 'Minecraft';
-    src: url(../fonts/Minecraft.TTF);
+    src: url("../fonts/Minecraft.TTF?") format("truetype");
+  }
+  @font-face {
+    font-family: 'Papyrus';
+    src: url("../fonts/papyrus.TTF?") format("truetype");
   }
 *{
   box-sizing: border-box;
@@ -47,6 +51,11 @@ h3{
   font-weight: 50;
   font-size: medium;
 }
+
+h4{
+  font-family: 'Minecraft';
+  color: var(--sky-blue);
+}
 body {
   --boardwalk: #6f3400ff;
   --seafoam-white: #e0f9ff;
@@ -59,18 +68,16 @@ body {
   background-size: 100% 100%;
   min-height: 100vh;
   color: var(--seafoam-white);
-  font-family: 'Minecraft';
+  font-family: 'papyrus';
   font-size: small;
   cursor: url(../assets/tinysquid.png), auto;
-  margin-left:  15%;
-  margin-top: 1%;
+  margin-left: 15%;
   margin-right: 15%;
+  margin-top: 2%;
 }
 
 #wrapper {
-  position: absolute;
   display: grid;
-  margin: auto;
   grid-template-areas:
     "header header header header"
     "marquee marquee marquee marquee"
@@ -78,10 +85,40 @@ body {
     "nav status bulletinboard bulletinboard"
     "employee employee bulletinboard bulletinboard"
     "aquarium aquarium aquarium aquarium";
-  grid-template-columns: 1fr repeat(2, 2fr) 1fr;
+  grid-template-columns: 15% 25% 25% 25%;
   grid-template-rows: 50px 40px 200px 200px 200px 60px;
   gap: 10px;
-  padding: 20px 75px 20px 20px;
+  padding: 20px 75px 20px 75px;
+}
+
+.navlink{
+  display: contents;
+}
+
+.navtext{
+  font-family: 'Minecraft';
+  background: radial-gradient(circle, rgba(87,196,229,0) 0%, rgba(111,52,0,0.5) 100%);
+  padding: 1px;
+  border: #085fa1ff 1px dashed;
+  border-radius: 5%;
+  border-style: inset;
+  text-align: center;
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.box{
+  display: flex;
+  background-image: linear-gradient(rgb(230, 100, 101, 0), var(--sky-blue) );
+  padding:10px;
+  border-color: var(--seafoam-white);
+  border-style: groove;
+  flex-direction:column;
+}
+
+.box img{
+  scale: 50%
 }
 
 header{
@@ -104,36 +141,24 @@ nav{
   z-index: 99;
   background-image: linear-gradient(rgb(0, 30, 65, 0), rgb(0, 30, 65) );
   width: 1fr;
+  overflow: scroll;
 
-}
-
-.navlink{
-  display: contents;
-}
-
-.navtext{
-  background: radial-gradient(circle, rgba(87,196,229,0) 0%, rgba(111,52,0,0.5) 100%);
-  padding: 1px;
-  border: #085fa1ff 1px dashed;
-  border-radius: 5%;
-  border-style: inset;
-  text-align: center;
-  margin-top: 2%;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-.box{
-  background-image: linear-gradient(rgb(230, 100, 101, 0), var(--sky-blue) );
-  padding:10px;
-  border-color: var(--seafoam-white);
-  border-style: groove;
 }
 
 #intro{
   grid-area: intro;
   background-image: linear-gradient(rgb(230, 100, 101, 0), var(--darkblue));
 
+}
+
+#intro::after{
+  content: '';
+  background-image: url('../assets/gold_star.png');
+  background-size: cover;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px; /* Space between image and text */
 }
 
 #updates::before{
@@ -145,13 +170,14 @@ nav{
   overflow: scroll;
 
 }
+#feed-title{}
 
-#employeemonth{
-  grid-area: employee;
+#feed-item-title{
+
 }
 
-#employeemonth::after{
-  
+#employeeMonth{
+  grid-area: employee;
 }
 
 #aquarium{
@@ -173,11 +199,4 @@ nav{
 
 footer{
   position: relative;
-}
-
-.D{
-  border-image: linear-gradient(#f6b73c, #4d9f0c) 30;
-  position: center;
-  width: 50%;
-  height: "50%";
 }
