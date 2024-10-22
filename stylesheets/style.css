@@ -3,28 +3,28 @@
    "how to change link color." */
    @font-face {
     font-family: 'BubblePixel';
-    src: url("../fonts/04B_30.TTF?") format("truetype");
+    src: url("../fonts/04B_30.ttf") format("truetype");
   }
   @font-face {
     font-family: 'Crang';
-    src: url("../fonts/Crang.TTF?") format("truetype");
+    src: url("../fonts/Crang.ttf") format("truetype");
   }
 
   @font-face {
     font-family: 'Paskowy';
-    src: url("../fonts/Paskowy.TTF?") format("truetype");
+    src: url("../fonts/Paskowy.ttf") format("truetype");
   }
   @font-face {
     font-family: 'Daydream';
-    src: url("../fonts/Daydream.TTF?") format("truetype");
+    src: url("../fonts/Daydream.ttf") format("truetype");
   }
   @font-face {
     font-family: 'Minecraft';
-    src: url("../fonts/Minecraft.TTF?") format("truetype");
+    src: url("../fonts/Minecraft.ttf") format("truetype");
   }
   @font-face {
     font-family: 'Papyrus';
-    src: url("../fonts/papyrus.TTF?") format("truetype");
+    src: url("../fonts/papyrus.ttf") format("truetype");
   }
 *{
   box-sizing: border-box;
