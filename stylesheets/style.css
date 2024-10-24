@@ -82,9 +82,9 @@ body {
     "header header header header"
     "marquee marquee marquee marquee"
     "nav intro intro updates"
-    "nav status bulletinboard bulletinboard"
-    "employee employee bulletinboard bulletinboard"
-    "aquarium aquarium aquarium aquarium";
+    "nav status bulletinboard chatbox"
+    "employee employee bulletinboard chatbox"
+    "footer footer footer footer ";
   grid-template-columns: 15% 25% 25% 25%;
   grid-template-rows: 50px 40px 200px 200px 200px 60px;
   gap: 10px;
@@ -110,6 +110,7 @@ body {
 
 .box{
   display: flex;
+  overflow: scroll;
   background-image: linear-gradient(rgb(230, 100, 101, 0), var(--sky-blue) );
   padding:10px;
   border-color: var(--seafoam-white);
@@ -118,7 +119,7 @@ body {
 }
 
 .box img{
-  scale: 50%
+  scale: 50%;
 }
 
 header{
@@ -133,6 +134,7 @@ header{
 
 .marquee{
   grid-area: marquee;
+  overflow-wrap: anywhere;
   font-family: "Courier New";
 }
 
@@ -142,7 +144,24 @@ nav{
   background-image: linear-gradient(rgb(0, 30, 65, 0), rgb(0, 30, 65) );
   width: 1fr;
   overflow: scroll;
+}
 
+a{
+}
+
+a:hover{
+  color: var(--sky-blue);
+  font-size: 14px;
+}
+
+#Instagram::after{
+  background-image: url('../assets/instagram.png');
+  content: '';
+  background-size: cover;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
 }
 
 #intro{
@@ -180,17 +199,12 @@ nav{
   grid-area: employee;
 }
 
-#aquarium{
-  grid-area:aquarium;
-  background-color: var(--sky-blue);
-  background-blend-mode:darken;
-  padding: 10px;
-  font-size: medium;
-  width: 1fr;
-}
-
 #bulletinboard{
   grid-area: bulletinboard;
+}
+
+#chatbox{
+  grid-area: chatbox;
 }
 
 #status{
@@ -198,5 +212,6 @@ nav{
 }
 
 footer{
+  grid-area: footer;
   position: relative;
 }
