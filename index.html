@@ -1,26 +1,23 @@
 <!DOCTYPE html>
+<!--HI! This is the source of my code. Don't steal it all or I'll find you. But if you wanna copy parts and learn how to do a website here, I am honored. I just ask you put my little badge or credit me somewhere :p Idc where.-->
+    <!---------------------------------------->
+    <!--TO_DO:                              -->
+    <!----1. commenting                     -->
+    <!----2. spinfish movable               -->
+    <!---------------------------------------->
+
 <html>
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mal's Oceanic Emporium</title>
     <link href="stylesheets/style.css" rel="stylesheet" type="text/css" media="all">
-    <link id="favicon" rel="icon" href="assets/waveico.gif" type="image/gif" >
-    <script type="text/javascript">
-      var isChromium = !!window.chrome;
-      if(isChromium){
-        let head = document.head;
-        let favicon = head.querySelector('favicon');
-        head.removeChild(favicon);
-        innerHTML += '<link rel="icon" href="' + 'assets/tinysquid.png' + '" type="image">';
-      }
-    </script>
+
+    <!-- GIF Favicon.-->
+    <!-- If on a browser that does not support GIF favicons, replaces the icon with a png using check_browser.js-->
+    <script src="scripts/check_browser.js"></script>
   </head>
   <body>
-    <div class="spinfish_movable">
-
-    </div>
-
     <div id="wrapper">
       <header id="header">Welcome to the Oceanic Emporium</header>
 
@@ -55,11 +52,13 @@
       </div>
 
       <div id="updates" title="Oceanic Updates" class="box">
-        <script src="//rss.bloople.net/?url=https%3A%2F%2Fwww.noaa.gov%2Ftaxonomy%2Fterm%2F259%2Ffeed&detail=-1&limit=12&showicon=true&type=js"></script>
-        <!--https://www.noaa.gov/taxonomy/term/259/feed-->
-        <!--<script src="//rss.bloople.net/?url=https%3A%2F%2Foceantoday.noaa.gov%2Frss%2Focean_today.xml&detail=-1&limit=12&showicon=true&type=js"></script>-->
-      </div>
 
+        <script src="/scripts/rss.js"></script>
+        <script src="/scripts/rss_feed.js"></script>
+        <!-- The link below helps keep this service FREE, and helps other people find the SW widget. Please be cool and keep it! Thanks. --> 
+        <div style="color:#ccc;font-size:10px; text-align:right; width:230px;">powered by <a href="https://surfing-waves.com" rel="noopener" target="_blank" style="color:#ccc;">Surfing Waves</a></div> 
+  <!-- end sw-rss-feed code -->
+      </div>
       <div id="status" title="Status" class="box"><h2>Status</h2>
         <img src="../assets/under-construction3.gif">
       </div>

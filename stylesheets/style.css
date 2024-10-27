@@ -201,12 +201,14 @@ nav{
   overflow: scroll;
 
 }
-#feed-title{}
 
-#feed-item-title{
-
+.feed-container{
+  overflow:scroll;
 }
-
+.feed-container .content .item .title{
+    font-family: 'Minecraft';
+    color: navy;
+}
 #employeeMonth{
   grid-area: employee;
 }
