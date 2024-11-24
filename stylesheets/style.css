@@ -218,14 +218,34 @@ nav{
 /*Employee of the Month*/
 #employeeMonth{
   grid-area: employee;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 80%, var(--algae));
+  background-image: url('../assets/placeholderwood.jpg');
+}
+.flex-grid{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-self: center;
 }
 
+#plaque{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 80%, var(gold));
+}
 #employee_img{
   content: url('../assets/joel-spin.gif');
   scale: 40%;
 }
-
+#employee_name{
+  background: linear-gradient(to bottom, #cfc09f 27%, #ffecb3 40%, #3a2c0f 78%); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+    position: relative;
+  text-transform: uppercase;
+  font-size: xx-large;
+  margin: 0;
+  font-weight: 400;
+}
 #employee_name::before{
   background-image: url('../assets/gold_star.png');
   content: '';
