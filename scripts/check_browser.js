@@ -16,10 +16,9 @@ var isGoogleChrome = (typeof winNav.userAgentData !== "undefined") ? winNav.user
 var headDoc = document.head.innerHTML;
 var faviconSrc ="<link id='favicon' rel='icon' href=";
 
-headDoc += '<meta name="description" content="This is a sample description.">';
-
 if (isIOSChrome) {
-   // is Google Chrome on IOS
+    faviconSrc += "'/assets/tinysquid.png' type='image/png'></link>";
+    headDoc += faviconSrc;
 } else if(
   isChromium !== null &&
   typeof isChromium !== "undefined" &&
