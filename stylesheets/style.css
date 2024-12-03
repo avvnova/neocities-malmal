@@ -1,6 +1,3 @@
-/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
-   HTML content. To learn how to do something, just try searching Google for questions like
-   "how to change link color." */
    @font-face {
     font-family: 'BubblePixel';
     src: url("../fonts/04B_30.ttf") format("truetype");
@@ -26,54 +23,71 @@
     font-family: 'Papyrus';
     src: url("../fonts/papyrus.ttf") format("truetype");
   }
-*{
-  box-sizing: border-box;
-  list-style-position: inside;
-}
 
+  /* Set bottom accent color of box
+  background-image: linear-gradient(rgb(0, 0, 0, 0), 80%, var(--coral));*/
+
+/* Link effects */
 a{
   text-decoration: none;
-  color: var(--link-color);
-  text-shadow: var(--boardwalk);
-  transition: .7s;
+  color: var(--seafoam);
+  /*text-shadow: var(--algae) 1px 1px;*/
+  transition: .2s;
+}
+a:hover{
+  font-size: 14px;
 }
 
+#insta:hover{
+  color: var(--coral);
+  font-size: 14px;
+}
+
+/* Headers */
 h2{
   font-family: 'Daydream';
   color:var(--coral);
   mix-blend-mode: difference ;
   font-size: large;
-  opacity: 75%;
-  text-shadow: var(--darkblue) 0px 5px 3px;
+  opacity: 100%;
+  text-shadow: var(--reef) 0px 5px 3px;
 }
 h3{
   font-family: 'Crang';
   font-weight: 50;
   font-size: medium;
+  text-shadow: var(--reef) 0px 5px 3px;
 }
 
 h4{
   font-family: 'Minecraft';
-  color: var(--sky-blue);
 }
 body {
-  --boardwalk: #6f3400ff;
-  --seafoam-white: #e0f9ff;
-  --sky-blue: #57c4e5;
-  --darkblue: #001e41;
-  --coral: #FF8559;
-  
-  background-color: var(--lapis);
+  /* Theme 1 */
+  --reef: #21476d;
+  --algae: #007d7d;
+  --seafoam: #b2eee6;
+  --coral: #ff967d;
+  --coral-strong: #f97171;
+  /*--purple: already in color scheme
+
+  /* Theme 2 
+  --cloud: #eefffc;
+  --seafoam: #8ad6cc;
+  */
+
+  background-color: var(--sky);
   background-image: url(../assets/water-bg.gif);
   background-size: 100% 100%;
   min-height: 100vh;
-  color: var(--seafoam-white);
+  color: var(--seafoam);
   font-family: 'papyrus';
   font-size: small;
   cursor: url(../assets/tinysquid.png), auto;
   margin-left: 15%;
   margin-right: 15%;
   margin-top: 2%;
+  margin-bottom: 0%;
 }
 
 #wrapper {
@@ -86,46 +100,24 @@ body {
     "employee employee bulletinboard chatbox"
     "footer footer footer footer ";
   grid-template-columns: 15% 25% 25% 25%;
-  grid-template-rows: 50px 40px 200px 200px 200px 60px;
+  grid-template-rows: 50px 40px 200px 200px 250px 60px;
   gap: 10px;
   padding: 20px 75px 20px 75px;
-}
-
-.navlink{
-  display: contents;
-}
-
-.navtext{
-  font-family: 'Minecraft';
-  background: radial-gradient(circle, rgba(87,196,229,0) 0%, rgba(111,52,0,0.5) 100%);
-  padding: 1px;
-  border: #085fa1ff 1px dashed;
-  border-radius: 5%;
-  border-style: inset;
-  text-align: center;
-  margin-top: 2%;
-  margin-left: 10%;
-  margin-right: 10%;
 }
 
 .box{
   display: flex;
   overflow: scroll;
-  background-image: linear-gradient(rgb(230, 100, 101, 0), var(--sky-blue) );
   padding:10px;
-  border-color: var(--seafoam-white);
-  border-style: groove;
-  flex-direction:column;
-}
-
-.box img{
-  scale: 50%;
+  border-color: var(--seafoam);
+  border-style: groove dotted;
+  flex-direction: column;
 }
 
 header{
   font-family: 'BubblePixel';
   font-size: 36px;
-  text-shadow: #001e41 0px 10px 1px ;
+  text-shadow: navy 0px 10px 1px ;
   grid-area: header;
   grid-column-start: 1;
   grid-column-end: span 5;
@@ -137,21 +129,165 @@ header{
   overflow-wrap: anywhere;
   font-family: "Courier New";
 }
-
+/* Nav Column */
 nav{
   grid-area:nav;
   z-index: 99;
-  background-image: linear-gradient(rgb(0, 30, 65, 0), rgb(0, 30, 65) );
-  width: 1fr;
+  background-image: linear-gradient(rgb(0, 0, 0, 0.2) 10% , purple);
   overflow: scroll;
 }
 
-a{
+.navlink{
+  display: contents;
 }
 
-a:hover{
-  color: var(--sky-blue);
-  font-size: 14px;
+.navtext{
+  font-family: 'Minecraft';
+  background: radial-gradient(circle, var(--reef) 80%,var(--seafoam) 100%);
+  padding: 1px;
+  border: #085fa1ff 1px dashed;
+  border-radius: 5%;
+  border-style: inset;
+  text-align: center;
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#about::before{
+  background-image: url('../assets/pink_coral.png');
+  content: '';
+  
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+
+  margin-right: 5px;
+  width: 30px;  /* Set the desired width */
+  height: 30px; /* Set the desired height */
+}
+
+#stuff::before{
+  background-image: url('../assets/green_coral.png');
+  content: '';
+  
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+
+  margin-right: 5px;
+  width: 30px;  /* Set the desired width */
+  height: 30px; /* Set the desired height */
+}
+
+#other::before{
+  background-image: url('../assets/blue_coral.png');
+  content: '';
+
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+
+
+  margin-right: 5px;
+  width: 30px;  /* Set the desired width */
+  height: 30px; /* Set the desired height */
+}
+/*------*/
+
+#intro{
+  grid-area: intro;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 70%, var(--coral));
+}
+
+/* RSS Feed */
+#updates{
+  grid-area: updates;
+  overflow: scroll;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 80%, var(--algae));
+}
+.feed-container{
+  overflow:scroll;
+}
+.feed-container .content .item .title{
+    font-family: 'Minecraft';
+    color: var(--reef);
+}
+/*------------*/
+
+/*Employee of the Month*/
+#employeeMonth{
+  grid-area: employee;
+  background-image: url('../assets/placeholderwood.jpg');
+}
+.flex-grid{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  align-self: center;
+}
+
+#plaque{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 80%, var(gold));
+}
+#employee_img{
+  content: url('../assets/joel-spin.gif');
+  scale: 40%;
+}
+#employee_name{
+  background: linear-gradient(to bottom, #cfc09f 27%, #ffecb3 40%, #3a2c0f 78%); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+  font-family: 'Playfair Display', serif;
+    position: relative;
+  text-transform: uppercase;
+  font-size: xx-large;
+  margin: 0;
+  font-weight: 400;
+}
+#employee_name::before{
+  background-image: url('../assets/gold_star.png');
+  content: '';
+  
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+
+  width: 50px;  /* Set the desired width */
+  height: 50px; /* Set the desired height */
+}
+#employee_name::after{
+  background-image: url('../assets/gold_star.png');
+  content: '';
+  
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+
+  width: 50px;  /* Set the desired width */
+  height: 50px; /* Set the desired height */
+}
+/* ------ */
+
+#bulletinboard{
+  grid-area: bulletinboard;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 80%, purple);
+}
+
+#chatbox{
+  grid-area: chatbox;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 80%, var(--coral-strong));
+}
+
+#status{
+  grid-area: status;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 80%, var(--seafoam));
+}
+
+footer{
+  grid-area: footer;
+  position: relative;
 }
 
 #Instagram::after{
@@ -164,54 +300,40 @@ a:hover{
   margin-left: 5px;
 }
 
-#intro{
-  grid-area: intro;
-  background-image: linear-gradient(rgb(230, 100, 101, 0), var(--darkblue));
+.floatingGraphic{
+  position: fixed;
+  height: auto;
+  width: 250px;
+  /*margin: 10px: adds space between screen edge and image*/
+}
+#topGraphicOne{
 
 }
-
-#intro::after{
-  content: '';
-  background-image: url('../assets/gold_star.png');
-  background-size: cover;
-  display: inline-block;
-  width: 50px;
-  height: 50px;
-  margin-right: 10px; /* Space between image and text */
-}
-
-#updates::before{
+#topGraphicTwo{
 
 }
-
-#updates{
-  grid-area: updates;
-  overflow: scroll;
-
+#btmGraphicOne{
+  bottom:-50px;
+  left: 2px;
+  z-index: 98;
 }
-#feed-title{}
-
-#feed-item-title{
-
+#btmGraphicTwo{
+  bottom: -60px;
+  left: 100px;
+  z-index: 100;
 }
-
-#employeeMonth{
-  grid-area: employee;
+#btmGraphicThree{
+  bottom: -40px;
+  right: 0px;
+  z-index: 99;
 }
-
-#bulletinboard{
-  grid-area: bulletinboard;
+#btmGraphicFour{
+  bottom: -40px;
+  right:100px;
+  z-index: 101;
 }
-
-#chatbox{
-  grid-area: chatbox;
-}
-
-#status{
-  grid-area: status;
-}
-
-footer{
-  grid-area: footer;
-  position: relative;
+#btmGraphicFive{
+  bottom:-40px;
+  right: -75px;
+  z-index: 98;
 }
