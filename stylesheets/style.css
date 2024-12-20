@@ -48,19 +48,20 @@ h2{
   font-family: 'Daydream';
   color:var(--coral);
   mix-blend-mode: difference ;
-  font-size: large;
+  font-size: medium;
   opacity: 100%;
   text-shadow: var(--reef) 0px 5px 3px;
 }
 h3{
   font-family: 'Crang';
   font-weight: 50;
-  font-size: medium;
+  font-size: small;
   text-shadow: var(--reef) 0px 5px 3px;
 }
 
 h4{
   font-family: 'Minecraft';
+  font-size: small;
 }
 body {
   /* Theme 1 */
