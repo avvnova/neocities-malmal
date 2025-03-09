@@ -1,5 +1,5 @@
 rssfeed_url = new Array();
-rssfeed_url[0]="https://www.noaa.gov/taxonomy/term/259/feed";
+rssfeed_url[0]="https://oceanservice.noaa.gov/rss/nosnews.xml";
 
 rssfeed_frame_height="";
 rssfeed_scroll="on";

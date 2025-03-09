@@ -21,13 +21,10 @@
 
 <body>
   <div id="wrapper">
-    <header id="header">Welcome to the Oceanic Emporium</header>
+    <header id="header"><h1>Welcome to Mal's Oceanic Emporium</h1></header>
 
     <div class="marquee">
 
-      ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
-      ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
-      ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
     </div>
 
     <nav>
@@ -46,7 +43,6 @@
       <a class="navlink" href="https://www.last.fm/user/solmalidk">
         <div class="navtext" title="last.fm for tracking music">shanties</div>
       </a>
-      
 
       <h3 id="other" style="text-align: center">Other</h3>
       <a class="navlink" href="https://github.com/avvnova/neocities-malmal">
@@ -66,7 +62,6 @@
       <p> Hello ( ˶ˆᗜˆ˵ )!! You have entered the Oceanic Emporium. We sell a grand total of 0 wares, 0 goods and 0
         trinkets here at the moment. We have an employee of the month though, his name is Joel. I don't really know what
         he does.</p>
-      <br>
       <p> In all seriousness, welcome to my Neocities :3 I made this because I love the idea of building community in
         spaces separate from the need for commercialization, and I wanted to use my coding chops to make something
         genuinely fun and cute for people to interact with. I hope to build more and more on this website over time, so
@@ -88,18 +83,23 @@
     </div>
 
     <div id="employeeMonth" title="Employee of the Month" class="box">
+      
       <div class="flex-grid">
-        <div id="plaque">
-          <h2 style="text-align: center;"> Employee of the Month</h2>
-        </div><!--<a href link to a simple flex grid page with all the previous employees of the month-->
-        <div style="background-image: linear-gradient(rgba(0, 0, 0, 0.5) 80%, var(--algae));">
+      
+        <h2 style="text-align: center;"> Employee of the Month</h2>
+        <!--<a href link to a simple flex grid page with all the previous employees of the month-->
+
+        <div style="background-image: radial-gradient( gold 10%, rgba(0,0,0, 0) 50%);">
           <img id="employee_img" title="Please take your hand off Joel he is very shy.">
         </div>
+
         <div id="employee_name" data-heading="Winner" contenteditable>Joel</div>
+      
       </div>
     </div>
 
     <div id="bulletinboard" class="box">
+      
       <h2>Updates</h2>
       <p>
         <img src="../assets/under-construction2.gif">
@@ -107,13 +107,13 @@
     </div>
 
     <div id="chatbox" class="box">
+      
       <h2>Chat</h2>
-      <iframe src="https://www3.cbox.ws/box/?boxid=3542382&boxtag=qa2HM0" width="100%" height="450"
-        allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0"
-        scrolling="auto"></iframe>
+      <iframe id="cbox_core" src="https://www3.cbox.ws/box/?boxid=3542382&boxtag=qa2HM0" ></iframe>
     </div>
+
     <footer>
-      <p id="Instagram">
+      <p id="instagram">
         Custom Art commissioned from <a id="insta"
           href="https://www.instagram.com/lamb_sawce/?locale=kk-KZ&hl=ar">@lamb_sawce</a>
       </p>
@@ -121,16 +121,15 @@
   </div>
 </body>
 <div class="graphicContainer" style="position:relative">
-  <img class="floatingGraphic" id="topGraphicOne" src="assets/squid.png">
-  <img class="floatingGraphic" id="topGraphicTwo" src="assets/purple_star.png">
-  <img class="floatingGraphic" id="topGraphicThree" src="assets/pink_coral.png">
+  <img class="floating_graphic" id="top_graphic_1" src="assets/squid.png">
+  <img class="floating_graphic" id="top_graphic_2" src="assets/gold_star.png">
 </div>
 <div class="graphicContainer" style="position:relative;">
-  <img class="floatingGraphic" id="btmGraphicOne" src="assets/purple_star.png">
-  <img class="floatingGraphic" id="btmGraphicTwo" src="assets/blue_coral.png">
-  <img class="floatingGraphic" id="btmGraphicThree" src="assets/gupps.gif">
-  <img class="floatingGraphic" id="btmGraphicFour" src="assets/pink_coral.png">
-  <img class="floatingGraphic" id="btmGraphicFive" src="assets/green_coral.png">
+  <img class="floating_graphic" id="btm_graphic_1" src="assets/purple_star.png">
+  <img class="floating_graphic" id="btm_graphic_2" src="assets/blue_coral.png">
+  <img class="floating_graphic" id="btm_graphic_3" src="assets/gupps.gif">
+  <img class="floating_graphic" id="btm_graphic_4" src="assets/pink_coral.png">
+  <img class="floating_graphic" id="btm_graphic_5" src="assets/green_coral.png">
 </div>
 
 </html>
