@@ -227,6 +227,7 @@ nav{
 #employeeMonth{
   grid-area: employee;
   overflow: hidden;
+  background-color: rgba(0,25,50,0.6);
 }
 
 .flex-grid{
@@ -277,7 +278,7 @@ nav{
 
 #bulletinboard{
   grid-area: bulletinboard;
-  background-image: linear-gradient(rgba(0, 25, 50, 0.6) 80% purple);
+  background-image: linear-gradient(rgba(0, 25, 50, 0.6) 80%, purple);
 }
 
 #chatbox{
@@ -299,7 +300,7 @@ nav{
 
 #status{
   grid-area: status;
-  background-image: linear-gradient(rgba(0, 25, 50, 0.6) 80% var(--seafoam));
+  background-image: linear-gradient(rgba(0, 25, 50, 0.6) 80%, var(--seafoam));
 }
 
 footer{
