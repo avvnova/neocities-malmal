@@ -1,11 +1,15 @@
   /* Add some content at the bottom of the video/page */
   .banner {
     position: absolute;
-    top:50%;
+    top:40%;
     background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
     color: #f1f1f1;
     width: 80%;
     padding-left: 1%;
+  }
+  .backlink {
+    position: absolute;
+    top: 80%;
   }
   body{
     height:100vh;

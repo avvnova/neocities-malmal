@@ -44,11 +44,17 @@ a:hover{
 }
 
 /* Headers */
+
+h1{
+  font-family: 'BubblePixel';
+  font-size: 36px;
+  text-shadow: navy 0px 10px 1px ;
+}
 h2{
   font-family: 'Daydream';
   color:var(--coral);
   mix-blend-mode: difference ;
-  font-size: large;
+  font-size: medium;
   opacity: 100%;
   text-shadow: var(--reef) 0px 5px 3px;
 }
@@ -61,6 +67,7 @@ h3{
 
 h4{
   font-family: 'Minecraft';
+  font-size: small;
 }
 body {
   /* Theme 1 */
@@ -83,6 +90,7 @@ body {
   color: var(--seafoam);
   font-family: 'papyrus';
   font-size: small;
+  font-weight: bold;
   cursor: url(../assets/tinysquid.png), auto;
   margin-left: 15%;
   margin-right: 15%;
@@ -115,9 +123,6 @@ body {
 }
 
 header{
-  font-family: 'BubblePixel';
-  font-size: 36px;
-  text-shadow: navy 0px 10px 1px ;
   grid-area: header;
   grid-column-start: 1;
   grid-column-end: span 5;
@@ -133,7 +138,7 @@ header{
 nav{
   grid-area:nav;
   z-index: 99;
-  background-image: linear-gradient(rgb(0, 0, 0, 0.2) 10% , purple);
+  background-image: linear-gradient(rgb(0, 25, 50, 0.6) 80%, var(--algae));
   overflow: scroll;
 }
 
@@ -161,10 +166,11 @@ nav{
   background-size: contain;
   display: inline-block;
   vertical-align: middle;
-
-  margin-right: 5px;
-  width: 30px;  /* Set the desired width */
-  height: 30px; /* Set the desired height */
+  position: relative;
+  left: -10px;
+  
+  width: 40px;  /* Set the desired width */
+  height: 40px; /* Set the desired height */
 }
 
 #stuff::before{
@@ -174,10 +180,11 @@ nav{
   background-size: contain;
   display: inline-block;
   vertical-align: middle;
+  position: relative;
+  left: -10px;
 
-  margin-right: 5px;
-  width: 30px;  /* Set the desired width */
-  height: 30px; /* Set the desired height */
+  width: 40px;  /* Set the desired width */
+  height: 40px; /* Set the desired height */
 }
 
 #other::before{
@@ -187,24 +194,25 @@ nav{
   background-size: contain;
   display: inline-block;
   vertical-align: middle;
+  position: relative;
+  left: -10px;
 
-
-  margin-right: 5px;
-  width: 30px;  /* Set the desired width */
-  height: 30px; /* Set the desired height */
+  width: 40px;  /* Set the desired width */
+  height: 40px; /* Set the desired height */
 }
-/*------*/
+
+/*--- Blocks ---*/
 
 #intro{
   grid-area: intro;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 70%, var(--coral));
+  background-image: linear-gradient(rgba(0, 25, 50, 0.6) 80%, var(--coral));
 }
 
 /* RSS Feed */
 #updates{
   grid-area: updates;
   overflow: scroll;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 80%, var(--algae));
+  background-image: linear-gradient(rgba(0, 25, 50, 0.6) 80%, var(--algae));
 }
 .feed-container{
   overflow:scroll;
@@ -218,21 +226,20 @@ nav{
 /*Employee of the Month*/
 #employeeMonth{
   grid-area: employee;
-  background-image: url('../assets/placeholderwood.jpg');
+  overflow: hidden;
+  background-color: rgba(0,25,50,0.6);
 }
+
 .flex-grid{
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 90%;
   align-self: center;
 }
 
-#plaque{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 80%, var(gold));
-}
 #employee_img{
   content: url('../assets/joel-spin.gif');
-  scale: 40%;
+  scale: 50%;
 }
 #employee_name{
   background: linear-gradient(to bottom, #cfc09f 27%, #ffecb3 40%, #3a2c0f 78%); 
@@ -243,8 +250,7 @@ nav{
     position: relative;
   text-transform: uppercase;
   font-size: xx-large;
-  margin: 0;
-  font-weight: 400;
+  text-align: center;
 }
 #employee_name::before{
   background-image: url('../assets/gold_star.png');
@@ -272,17 +278,29 @@ nav{
 
 #bulletinboard{
   grid-area: bulletinboard;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 80%, purple);
+  background-image: linear-gradient(rgba(0, 25, 50, 0.6) 80%, purple);
 }
 
 #chatbox{
   grid-area: chatbox;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 80%, var(--coral-strong));
+  background-image: linear-gradient(rgba(0, 25, 50, 0.6) 80%, var(--coral));
+
 }
+
+#cbox_core{  
+  width: 100%;
+  height:100%;
+  allowtransparency: yes;
+  allow:autoplay;
+  frameborder:0;
+  marginheight:0;
+  marginwidth:0;
+  scrolling: auto;
+  }
 
 #status{
   grid-area: status;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 80%, var(--seafoam));
+  background-image: linear-gradient(rgba(0, 25, 50, 0.6) 80%, var(--seafoam));
 }
 
 footer{
@@ -290,7 +308,7 @@ footer{
   position: relative;
 }
 
-#Instagram::after{
+#instagram::after{
   background-image: url('../assets/instagram.png');
   content: '';
   background-size: cover;
@@ -300,39 +318,41 @@ footer{
   margin-left: 5px;
 }
 
-.floatingGraphic{
+.floating_graphic{
   position: fixed;
   height: auto;
   width: 250px;
   /*margin: 10px: adds space between screen edge and image*/
 }
-#topGraphicOne{
-
+#top_graphic_1{
+  top:0px;
+  left: 0px;
 }
-#topGraphicTwo{
-
+#top_graphic_2{
+  top:0px;
+  right: 0px;
 }
-#btmGraphicOne{
+#btm_graphic_1{
   bottom:-50px;
   left: 2px;
   z-index: 98;
 }
-#btmGraphicTwo{
+#btm_graphic_2{
   bottom: -60px;
   left: 100px;
   z-index: 100;
 }
-#btmGraphicThree{
+#btm_graphic_3{
   bottom: -40px;
   right: 0px;
   z-index: 99;
 }
-#btmGraphicFour{
+#btm_graphic_4{
   bottom: -40px;
   right:100px;
   z-index: 101;
 }
-#btmGraphicFive{
+#btm_graphic_5{
   bottom:-40px;
   right: -75px;
   z-index: 98;
