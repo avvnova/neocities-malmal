@@ -105,7 +105,7 @@ body {
     "marquee marquee marquee marquee"
     "nav intro intro updates"
     "nav status bulletinboard chatbox"
-    "employee employee bulletinboard chatbox"
+    "employee employee button chatbox"
     "footer footer footer footer ";
   grid-template-columns: 15% 25% 25% 25%;
   grid-template-rows: 50px 40px 250px 200px 250px 60px;
@@ -239,7 +239,8 @@ nav{
 
 #employee_img{
   content: url('../assets/joel-spin.gif');
-  scale: 50%;
+  scale: 75%;
+  align-self: start
 }
 #employee_name{
   background: linear-gradient(to bottom, #cfc09f 27%, #ffecb3 40%, #3a2c0f 78%); 
@@ -279,6 +280,11 @@ nav{
 #bulletinboard{
   grid-area: bulletinboard;
   background-image: linear-gradient(rgba(0, 25, 50, 0.6) 80%, purple);
+}
+
+#button{
+  grid-area: button;
+  background-image: linear-gradient(rgba(0, 25, 50, 0.6) 80%, var(--algae));
 }
 
 #chatbox{

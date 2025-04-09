@@ -45,7 +45,6 @@ a:hover{
     background-size: 100% 3px;
 }
 
-
 body{
   --seafoam: #b2eee6;
   --coral-strong: #f97171;
@@ -70,6 +69,7 @@ footer{
   width: 80%;
   left: -10px;
   padding-left: 1%;
+  z-index: 1000;
 }
 
 #backlink {
@@ -82,6 +82,7 @@ footer{
   width: 30%;
   gap: 10px; /* Space between items */
   position: fixed;
+  place-content: center;
   right: 0;
 }
 
