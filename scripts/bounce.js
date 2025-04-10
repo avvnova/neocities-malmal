@@ -13,5 +13,5 @@ function applyBounce(element, amplitude = 10, frequency = 5) {
 }
   
   // Example usage:
-  let myElement = document.getElementById('top_graphic_1');
+  let myElement = document.getElementById('');
   applyBounce(myElement);

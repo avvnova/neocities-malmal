@@ -1,27 +1,26 @@
    @font-face {
     font-family: 'BubblePixel';
-    src: url("../fonts/04B_30.ttf") format("truetype");
+    src: url("../fonts/04B_30.ttf") format('truetype');
   }
   @font-face {
     font-family: 'Crang';
-    src: url("../fonts/Crang.ttf") format("truetype");
+    src: url("../fonts/Crang.ttf") format('truetype');
   }
-
   @font-face {
     font-family: 'Paskowy';
-    src: url("../fonts/Paskowy.ttf") format("truetype");
+    src: url("../fonts/Paskowy.ttf") format('truetype');
   }
   @font-face {
     font-family: 'Daydream';
-    src: url("../fonts/Daydream.ttf") format("truetype");
+    src: url("../fonts/Daydream.ttf") format('truetype');
   }
   @font-face {
     font-family: 'Minecraft';
-    src: url("../fonts/Minecraft.ttf") format("truetype");
+    src: url("../fonts/Minecraft.ttf") format('truetype');
   }
   @font-face {
     font-family: 'Papyrus';
-    src: url("../fonts/papyrus.ttf") format("truetype");
+    src: url("../fonts/papyrus.ttf") format('truetype');
   }
 
   /* Set bottom accent color of box
@@ -30,12 +29,13 @@
 /* Link effects */
 a{
   text-decoration: none;
-  color: var(--seafoam);
+  color: snow;
   /*text-shadow: var(--algae) 1px 1px;*/
   transition: .2s;
 }
 a:hover{
   font-size: 14px;
+  color:var(--coral)
 }
 
 #insta:hover{
@@ -43,8 +43,37 @@ a:hover{
   font-size: 14px;
 }
 
-/* Headers */
+ /* width */
+ ::-webkit-scrollbar {
+  width: 1px;
+  height: 3px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+} 
+/*
+    ::-webkit-scrollbar the scrollbar.
+    ::-webkit-scrollbar-button the buttons on the scrollbar (arrows pointing upwards and downwards).
+    ::-webkit-scrollbar-thumb the draggable scrolling handle.
+    ::-webkit-scrollbar-track the track (progress bar) of the scrollbar.
+    ::-webkit-scrollbar-track-piece the track (progress bar) NOT covered by the handle.
+    ::-webkit-scrollbar-corner the bottom corner of the scrollbar, where both horizontal and vertical scrollbars meet.
+    ::-webkit-resizer the draggable resizing handle that appears at the bottom corner of some elements.
+
+*/
+/* Headers */
 h1{
   font-family: 'BubblePixel';
   font-size: 36px;
@@ -64,11 +93,12 @@ h3{
   font-size: medium;
   text-shadow: var(--reef) 0px 5px 3px;
 }
-
 h4{
   font-family: 'Minecraft';
   font-size: small;
 }
+
+main { cursor: url(../assets/tinysquid.png), auto;}
 body {
   /* Theme 1 */
   --reef: #21476d;
@@ -82,16 +112,15 @@ body {
   --cloud: #eefffc;
   --seafoam: #8ad6cc;
   */
-
   background-color: var(--sky);
-  background-image: url(../assets/water-bg.gif);
+  background-image: url(../assets/ocean-surface.gif);
   background-size: 100% 100%;
   min-height: 100vh;
   color: var(--seafoam);
-  font-family: 'papyrus';
+  font-family:'papyrus';
+
   font-size: small;
   font-weight: bold;
-  cursor: url(../assets/tinysquid.png), auto;
   margin-left: 15%;
   margin-right: 15%;
   margin-top: 2%;
@@ -104,9 +133,9 @@ body {
     "header header header header"
     "marquee marquee marquee marquee"
     "nav intro intro updates"
-    "nav status bulletinboard chatbox"
-    "employee employee button chatbox"
-    "footer footer footer footer ";
+    "nav status bulletin_board chatbox"
+    "employee employee button todo"
+    "footer footer footer footer";
   grid-template-columns: 15% 25% 25% 25%;
   grid-template-rows: 50px 40px 250px 200px 250px 60px;
   gap: 10px;
@@ -118,8 +147,21 @@ body {
   overflow: scroll;
   padding:10px;
   border-color: var(--seafoam);
-  border-style: groove dotted;
+  border-style: double;
   flex-direction: column;
+}
+
+.flex-grid{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-self: center;
+}
+
+.marquee{
+  grid-area: marquee;
+  overflow-wrap: anywhere;
+  font-family: "Courier New";
 }
 
 header{
@@ -129,11 +171,6 @@ header{
   mix-blend-mode: overlay;
 }
 
-.marquee{
-  grid-area: marquee;
-  overflow-wrap: anywhere;
-  font-family: "Courier New";
-}
 /* Nav Column */
 nav{
   grid-area:nav;
@@ -201,7 +238,7 @@ nav{
   height: 40px; /* Set the desired height */
 }
 
-/*--- Blocks ---*/
+/*--- Boxes ---*/
 
 #intro{
   grid-area: intro;
@@ -223,20 +260,64 @@ nav{
 }
 /*------------*/
 
+#status{
+  grid-area: status;
+  background-image: linear-gradient(rgba(0, 25, 50, 0.6) 80%, var(--seafoam));
+}
+
+#status_bar{
+  background-image: url('../assets/surface.gif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border:#007d7d;
+  border-radius: 5%;
+  border-style: ridge;
+  padding: 3%;
+  flex-direction: row;
+  display: inline-flex;
+  justify-content:space-around;
+}
+
+.links-container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items:end;
+  justify-content:space-around;
+}
+
+#bulletin_board{
+  font-family: 'Courier New', Courier;
+  grid-area: bulletin_board;
+  background-image: linear-gradient(rgba(0, 25, 50, 0.6) 80%, purple);
+  overflow-x:hidden;
+  overflow-y:scroll;
+  line-height: 80% !important; 
+  text-align: left;
+  display: inline;
+}
+
+ul:nth-of-type(even){
+  color: var(--coral-strong);
+}
+
+/*---cbox---*/
+#chatbox{
+  grid-area: chatbox;
+  background-image: linear-gradient(rgba(0, 25, 50, 0.6) 80%, var(--coral));
+
+}
+#cbox_core{  
+  width: 100%;
+  height:100%;
+}
+/* ------ */
+
 /*Employee of the Month*/
 #employeeMonth{
   grid-area: employee;
   overflow: hidden;
   background-color: rgba(0,25,50,0.6);
 }
-
-.flex-grid{
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  align-self: center;
-}
-
 #employee_img{
   content: url('../assets/joel-spin.gif');
   scale: 75%;
@@ -277,30 +358,23 @@ nav{
 }
 /* ------ */
 
-#bulletinboard{
-  grid-area: bulletinboard;
-  background-image: linear-gradient(rgba(0, 25, 50, 0.6) 80%, purple);
-}
-
+/* --- button --- */
 #button{
   grid-area: button;
   background-image: linear-gradient(rgba(0, 25, 50, 0.6) 80%, var(--algae));
 }
+/* ------ */
 
-#chatbox{
-  grid-area: chatbox;
-  background-image: linear-gradient(rgba(0, 25, 50, 0.6) 80%, var(--coral));
-
+#todo{
+  grid-area: todo;
 }
 
-#cbox_core{  
-  width: 100%;
-  height:100%;
-}
-
-#status{
-  grid-area: status;
-  background-image: linear-gradient(rgba(0, 25, 50, 0.6) 80%, var(--seafoam));
+.listbox{
+  color: white;
+  background-image: url('../assets/wood_texture.jpg');
+  background-size: 50% 100%;
+  border-style: ridge;
+  border-radius: 25%;
 }
 
 footer{
@@ -313,8 +387,8 @@ footer{
   content: '';
   background-size: cover;
   display: inline-block;
-  width: 10px;
-  height: 10px;
+  width: 13px;
+  height: 13px;
   margin-left: 5px;
 }
 
