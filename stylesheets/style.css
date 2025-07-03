@@ -319,7 +319,7 @@ ul:nth-of-type(even){
   background-color: rgba(0,25,50,0.6);
 }
 #employee_img{
-  content: url('../assets/joel-spin.gif');
+  content: url('../assets/gupps.gif');
   scale: 75%;
   align-self: start
 }
