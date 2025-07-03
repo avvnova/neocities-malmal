@@ -10,13 +10,66 @@
   <!-- GIF Favicon.-->
   <!-- If on a browser that does not support GIF favicons, replaces the icon with a png using check_browser.js-->
   <script src="scripts/check_browser.js"></script>
-  <script src="scripts/autoplay_enable.js"></script>
+  <script src="scripts/audio_player.js"></script>
 </head>
 
-<body>
+<main>
+  <div id="audio_player">
+    <div id="audio_player__header">Oceanic Audio</div>
+    <div class="audio_player__controls">
+      <button class="audio_player__play_pause">Play</button>
+      <span class="audio_player__current_time">0:00</span>
+      <span class="audio_player__duration">0:00</span>
+      <input type="range" class="audio_player__seek_bar" value="0" min="0" max="100">
+  </div>
+  <script>
+// Make the DIV element draggable:
+dragElement(document.getElementById("audio_player"));
 
-  <audio loop autoplay><source src="https://adrian-ve-vi.com/assets/music/AquaticMine.mp3" type="audio/mpeg"></audio>
-  
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "__header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "__header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+</script>
+  <!--audio loop autoplay><source src="https://adrian-ve-vi.com/assets/music/AquaticMine.mp3" type="audio/mpeg"></audio-->
+
+<body> 
   <div id="wrapper">
     <header id="header"><h1>Welcome to Mal's Oceanic Emporium</h1></header>
     <div class="marquee"></div>
@@ -173,5 +226,5 @@
   <img class="floating_graphic" id="btm_graphic_4" src="assets/pink_coral.png">
   <img class="floating_graphic" id="btm_graphic_5" src="assets/green_coral.png">
 </div>
-
+</main>
 </html>

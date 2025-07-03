@@ -1,5 +1,5 @@
 // Should probably make sure that everything has been loaded.
-window.addEventListener('load', () => {
+/*window.addEventListener('load', () => {
   // Now then, when the user clicks anywhere on the page...
   document.addEventListener('click', () => {
     // We go through all the <audio autoplay> elements...
@@ -9,3 +9,4 @@ window.addEventListener('load', () => {
     }
   }, { passive: true, once: true }) // `once` for making this only fire once.
 }, { passive: true }) // `passive` for some slight optimisation magic.
+*/
