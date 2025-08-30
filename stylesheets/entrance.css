@@ -1,17 +1,36 @@
-body{
-    background-color: black;
+:root{
+  background-color: #0c1426;
+  --crt-red: rgb(218, 49, 49);
+  --crt-green: rgb(112, 159, 115);
+  --crt-blue: rgb(40, 129, 206);
+  /* theme colors */
+  --reef: #21476d;
+  --algae: #007d7d;
+  --seafoam: #b2eee6;
+  --coral: #ff967d;
+  --coral-strong: #f97171;
 }
 
+   @font-face {
+    font-family: 'BubblePixel';
+    src: url("../fonts/04B_30.ttf") format('truetype');
+  }
+
 .flexbox{
-    height: 500px;
-    width:1000px;
-    margin: -250px 0 0  -500px;
-    position:absolute;
-    top:50%;
-    left: 50%;
     display:flex;
     flex-direction: column;
     align-items: center;
+    max-width: fit-content;
+    margin-inline: auto;
+}
+
+#image{
+  background-image:url("../assets/water_blender.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 99vw;
+  height: 80vh;
+  margin-inline: auto;
 }
 
 #intro{
@@ -19,13 +38,14 @@ body{
     height: 50px;
 }
 
+#link{
+    flex-grow: 1;
+    height: 50px;
+    margin-top: 50px;
+    font-size: 20px;
+}
 /* From Uiverse.io by nazeer004 */ 
-.loader{
-    position: relative;
-    width: 1000px;
-} 
-
-  .loader h1 {
+  .wave-effect a {
     position: absolute;
     color: #fff;
     transform: translate(-50%, -50%);
@@ -33,14 +53,14 @@ body{
     letter-spacing: 5px;
   }
   
-  .loader h1:nth-child(1) {
-    color: transparent;
-    -webkit-text-stroke: 0.3px rgb(0, 57, 244);
+  .wave-effect a:nth-child(1) {
+    color: rgba(178, 238, 230, 0.1);
+    -webkit-text-stroke: 0.3px #b2eee6;;
   }
   
-  .loader h1:nth-child(2) {
-    color: rgb(0, 4, 255);
-    -webkit-text-stroke: 1px rgb(17, 0, 255);
+  .wave-effect a:nth-child(2) {
+    color:  var(--algae);
+    -webkit-text-stroke: 1px  var(--reef);
     animation: uiverse723 3s ease-in-out infinite;
   }
   
@@ -55,3 +75,54 @@ body{
        51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
     }
   }
+
+  a{
+      font-family: 'BubblePixel';
+  }
+ 
+/* Global */
+html {
+  font-size: 1.5rem;
+  font-family: "Courier New", monospace;
+  min-height: 100%;
+}
+main {
+  height: 100vh;
+  height: 100dvh;
+}
+
+.crt {
+
+  position: relative;
+  &:before,
+  &:after {
+    content: "";
+    transform: translateZ(0);
+    pointer-events: none;
+    opacity: 0.5;
+    mix-blend-mode: overlay;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  &:before {
+    background: repeating-linear-gradient(
+      var(--crt-red) 0px,
+      var(--crt-green) 2px,
+      var(--crt-blue) 4px
+    );
+  }
+  &:after {
+    background: repeating-linear-gradient(
+      90deg,
+      var(--crt-red) 1px,
+      var(--crt-green) 2px,
+      var(--crt-blue) 3px
+    );
+  }
+}
+
