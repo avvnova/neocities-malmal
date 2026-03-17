@@ -92,7 +92,6 @@ main {
 }
 
 .crt {
-
   position: relative;
   &:before,
   &:after {

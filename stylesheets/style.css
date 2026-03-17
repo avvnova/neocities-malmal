@@ -119,7 +119,7 @@ body {
   color: var(--seafoam);
   font-family:'papyrus';
 
-  font-size: small;
+  font-size: 1em;
   font-weight: bold;
   margin-left: 15%;
   margin-right: 15%;
@@ -169,6 +169,22 @@ header{
   grid-column-start: 1;
   grid-column-end: span 5;
   mix-blend-mode: overlay;
+
+}
+
+.wave-text span {
+    display: inline-block;
+    font-size: 3rem;
+    animation: wave 2s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
 /* Nav Column */
